@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL Data</title>
+</head>
+<body>
+    <h1>MySQL Data</h1>
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th>company</th>
+            <th>tel</th>
+            <th>name</th>
+            <th>note</th>
+            <th>important</th>
+            <th>source</th>
+            <!-- Add more columns as needed -->
+        </tr>
+        {% for row in data %}
+            <tr>
+                <td>{{ row.company }}</td>
+                <td>{{ row.tel }}</td>
+                <td>{{ row.name }}</td>
+                <td>{{ row.note }}</td>
+                <td>{{ row.important }}</td>
+                <td>{{ row.source }}</td>
+                <!-- Add more columns as needed -->
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
